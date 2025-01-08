@@ -36,6 +36,7 @@ resource "aws_iam_role_policy_attachment" "alb_ingress_controller_attachment" {
 }
 
 resource "kubernetes_service_account" "alb_ingress_sa" {
+  depends_on = [kubernetes_namespace.mern]
   metadata {
     name      = "aws-load-balancer-controller"
     namespace = "mern"
