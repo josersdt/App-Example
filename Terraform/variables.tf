@@ -21,3 +21,7 @@ variable "docker_image_tag" {
   default = "latest"
 }
 
+variable "user_name" {
+  type    = string
+  default = "web-app-terraform"
+}
