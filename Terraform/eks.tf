@@ -34,5 +34,20 @@ module "eks" {
       
     }
   }
+
 }
 
+module "eks_auth" {
+  source  = "terraform-aws-modules/eks/aws//modules/aws-auth"
+  version = "~> 20.0"
+
+  manage_aws_auth_configmap = true
+
+  aws_auth_roles = [
+    {
+      rolearn  = "arn:aws:iam::625006984319:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AWSAdministratorAccess_90386bec0051ffff"
+      username = "role1"
+      groups   = ["system:masters"]
+    },
+  ]
+}

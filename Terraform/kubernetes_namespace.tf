@@ -1,5 +1,5 @@
 resource "kubernetes_namespace" "mern" {
-  depends_on = [module.eks, kubernetes_config_map.aws_auth]
+  depends_on = [module.eks]
   metadata {
     name = "mern"
     labels = {
