@@ -50,7 +50,7 @@ resource "helm_release" "aws_load_balancer_controller" {
   name            = "aws-load-balancer-controller"
   repository      = "https://aws.github.io/eks-charts"
   chart           = "aws-load-balancer-controller"
-  version         = "2.9.0"              # Ajusta a la versión estable
+  version         = "2.11.0"              # Ajusta a la versión estable
   namespace       = "mern"
 
   # 1) Desactivamos la creación automática del SA para usar el nuestro

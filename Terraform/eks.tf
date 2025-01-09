@@ -46,7 +46,7 @@ module "eks_auth" {
   aws_auth_roles = [
     {
       rolearn  = "arn:aws:iam::625006984319:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AWSAdministratorAccess_90386bec0051ffff"
-      username = "role1"
+      username = "role_admin"
       groups   = ["system:masters"]
     },
   ]
