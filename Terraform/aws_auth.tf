@@ -20,14 +20,6 @@ resource "kubernetes_config_map" "aws_auth" {
         groups   = ["system:masters"]
       }
     ])
-
-    mapUsers = yamlencode([
-      {
-        userarn  = "arn:aws:iam::625006984319:user/web-app-terraform"
-        username = "cluster-creator"
-        groups   = ["system:masters"]
-      }
-    ])
   }
 }
 
