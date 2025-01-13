@@ -6,7 +6,7 @@ module "eks" {
   version = "~> 20.0"
 
   cluster_name    = var.cluster_name
-  cluster_version = "1.27"
+  cluster_version = "1.31"
   
   # VPC donde se ubica el EKS
   vpc_id    = module.vpc.vpc_id
