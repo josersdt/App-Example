@@ -17,7 +17,7 @@ module "eks" {
   # Configuración de acceso público y privado al endpoint del control plane
   cluster_endpoint_private_access = true  # Habilita acceso privado al control plane
   cluster_endpoint_public_access  = true  # Habilita acceso público al control plane
-  cluster_endpoint_public_access_cidrs = ["190.66.210.186/32"] # IPs permitidas para acceso público
+  #cluster_endpoint_public_access_cidrs = ["190.66.210.186/32"] # IPs permitidas para acceso público
 
   enable_cluster_creator_admin_permissions = true 
 
