@@ -48,9 +48,9 @@ resource "kubernetes_service_account" "alb_ingress_sa" {
 
 resource "helm_release" "aws_load_balancer_controller" {
   name            = "aws-load-balancer-controller"
-  repository      = "https://github.com/aws/eks-charts/tree/master/stable"
+  repository      = "https://aws.github.io/eks-charts"
   chart           = "aws-load-balancer-controller"
-  version         = "2.11.0"              # Ajusta a la versión estable
+  version         = "v2.11.0"              # Ajusta a la versión estable
   namespace       = "mern"
 
   # 1) Desactivamos la creación automática del SA para usar el nuestro
